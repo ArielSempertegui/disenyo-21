@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --color-primario: #fff;
+    --color-secundario: #18191d;
+    --color-terciario: #d81732;
+    --color-shadow: #d5d5d5;
+    --color-light-shadow: #f7f8fb;
+    --color-numeros: #d71920; /* Color de los números */
+    font-family: "Roboto", sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color-secundario);
+    position: absolute;
+    top: 45px;
+    width: 45%;
+    z-index: 100; /*Aseguramops que el header esté encima del hero-section*/
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+nav {
+    width: 90%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+nav li {
+    width: 100%;
+}
+
+li a {
+    display: block;
+    color: var(--color-primario);
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+}
+
+#selected {
+    background-color: var(--color-terciario);
+}
+
+/* Estilos para la sección "Hero" */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-shadow);
+    height: 100vh;
+}
+
+.hero-section:nth-child(2) {
+    background-color: var(--color-secundario);
+}
+
+.hero-content-column {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 3.5em;
+    font-weight: 350;
+    margin-bottom: 5px;
+    color: var(--color-secundario);
+}
+
+.hero-text span {
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 5%;
+    color: var(--color-secundario)
+}
+
+.hero-text p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--color-primario);
+    background-color: var(--color-terciario); 
+    padding: 15px 40px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 5rem;
+    text-decoration: none;
+}
+
+.hero-figure-column {
+    background-repeat: no-repeat;
+    /* La imagen como fondo cubre toda la columna */
+    background-image: url('../img/model1.png'); 
+    background-size: 68%;
+    background-position: 25%; 
+}
+
+/* Estilos para la sección "About" */
+.about-content-column {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: var(--color-primario);
+}
+
+.about-text span {
+    display: block;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 5%;
+    color: var(--color-terciario)
+}
+
+.about-text p {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.about-figure-column {
+    background-repeat: no-repeat;
+    /* La imagen como fondo cubre toda la columna */
+    background-image: url('../img/model2.png'); 
+    background-size: 68%; 
+    background-position: 75%;  
+}
+
+/* Estilos para la sección de la "statistics" */
+.statistics-list {
+    list-style: none;
+    text-align: center;
+    padding: 50px 20px; /* Espaciado superior e inferior para la sección */
+  
+    /* Flexbox para centrar y distribuir los ítems */
+    display: flex;
+    justify-content: center; /* Centra los ítems horizontalmente en el contenedor */
+    align-items: center;    /* Centra los ítems verticalmente (si fuera necesario) */
+    gap: 150px;              /* Espacio entre cada ítem */
+}
+
+/* List item individual (Centra el número y el texto) */
+.statistics-list li {
+    color: #333; /* Texto gris oscuro */
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Estilo para los Números Grandes */
+li span {
+    display: block;
+    color: var(--color-numeros);
+    font-size: 36px; 
+    font-weight: bold; /* Los números son más gruesos */
+    margin-bottom: 5px; /* Pequeño espacio entre el número y la descripción */
+    line-height: 1.2;
+}
+
+/*Estilo para la sección "gallery" */
+.gallery-section {
+    padding: 5% 30%;
+    text-align: center;
+    background-color: var(--color-light-shadow);
+}
+
+.gallery-section h2 {
+    color: rgba(229, 103, 120);
+    font-size: 22px; 
+    font-weight: 300;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.gallery-section > span {
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5em;
+}
+
+.gallery-section p {
+    margin: 7.5% 0;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.gallery-section figcaption {
+    margin-top: 5%;
+    line-height: 1.6;
+    font-size: 1.8em;
+    font-weight: 450;
+}
+
+.gallery-section figcaption span {
+    display: block;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* Estilos para la sección "reviews" */
+.reviews-section {
+    padding: 5% 0;
+    text-align: center;
+    height: 100vh
+}
+
+.reviews-section h2 {
+    color: rgba(229, 103, 120);
+    font-size: 22px; 
+    font-weight: 300;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.reviews-section > span {
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5em;
+}
+
+.reviews-section > p {
+    margin: 3% 0;
+    padding: 0 30%;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Estilos para el contenedor de reviews */
+.reviews-container {
+    display: flex; /* Alinea las tarjetas horizontalmente */
+    justify-content: center; /* Centra las tarjetas en el medio */
+    align-items: start; /* Alinea las tarjetas en el top */
+    gap: 30px; /* Espacio entre cada tarjeta */
+    padding-top: 50px;
+    height: 50%;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 20%;
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    height: 85%;
+}
+
+.review-card div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 3em;
+    transform: rotate(180deg);
+    position: relative;
+    top: 25px;
+    background-color: var(--color-terciario);
+}
+
+.review-card p {
+    margin-top: 50px;
+    padding: 0 12%;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2;
+}
+
+.review-card figure {
+    position: relative;
+    top: 50px;
+}
+
+.review-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review-card figcaption {
+    color: var(--color-secundario);
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.review-card figcaption span {
+    display: block;
+    color:#444;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 350;
+}
+
+.middle-card {
+    background-color: var(--color-terciario);
+    height: 100%;
+}
+
+.middle-card div {
+    background-color: var(--color-secundario);
+    position: relative;
+    top: 0px;
+}
+
+.middle-card figure {
+    position: relative;
+    top: 70px;
+}
+
+.middle-card figcaption span {
+    display: block;
+    color: var(--color-terciario)
+}
