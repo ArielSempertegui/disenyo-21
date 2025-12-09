@@ -444,16 +444,88 @@ li span {
 /* Estilos para el contenedor "form" */
 
 .contact-container {
-    height: 50%;
-    padding: 0 20%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
 }
 
+.form-column{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/* Estilos Generales del Contenedor */
 .contact-form {
-    width: 60%;
-    float: left;
+    min-width: 500px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.contact-list {
-    width: 40%;
-    float: right;
+/* Estilos de los Grupos de Campos (para separación) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilos Comunes para Inputs y Textarea */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho */
+    font-size: 16px;
+    color: #333; /* Color del texto */
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para el Textarea (el campo de Your Message) */
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+    min-height: 150px; /* Altura mínima como en la imagen */
+}
+
+/* Efecto Focus para Inputs y Textarea */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #c9002e; /* Borde rojo al enfocar */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+    box-shadow: 0 0 5px rgba(201, 0, 46, 0.2); /* Sombra sutil al enfocar */
+}
+
+/* Estilo para el Placeholder (el texto dentro del campo) */
+::placeholder {
+    color: #777; /* Gris más oscuro para el placeholder */
+    opacity: 1; /* Asegura que sea visible en todos los navegadores */
+}
+
+/* Estilos del Botón de Enviar (Send Message) */
+.submit-button {
+    width: 100%;
+    background-color: #c9002e; /* El color rojo vibrante */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Efecto Hover para el Botón */
+.submit-button:hover {
+    background-color: #a80027; /* Rojo un poco más oscuro al pasar el ratón */
+}
+
+/* Efecto Active para el Botón (al ser presionado) */
+.submit-button:active {
+    transform: translateY(1px); /* Efecto de "presión" */
 }
