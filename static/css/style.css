@@ -131,7 +131,7 @@ li a {
     /* La imagen como fondo cubre toda la columna */
     background-image: url('../img/model1.png'); 
     background-size: 68%;
-    background-position: 25%; 
+    background-position: 25% bottom; 
 }
 
 /* Estilos para la sección "About" */
@@ -178,7 +178,7 @@ li a {
     /* La imagen como fondo cubre toda la columna */
     background-image: url('../img/model2.png'); 
     background-size: 68%; 
-    background-position: 75%;  
+    background-position: 75% bottom;  
 }
 
 /* Estilos para la sección de la "statistics" */
@@ -291,15 +291,12 @@ li span {
 }
 
 .review-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     border-radius: 10px;
     width: 20%;
     color: var(--color-primario);
     background-color: var(--color-secundario);
-    height: 85%;
+    position: relative;
 }
 
 .review-card div {
@@ -311,14 +308,13 @@ li span {
     border-radius: 50%;
     font-size: 3em;
     transform: rotate(180deg);
-    position: relative;
-    top: 25px;
-    background-color: var(--color-terciario);
+    position: absolute;
+    top: -30px;
+    
 }
 
 .review-card p {
-    margin-top: 50px;
-    padding: 0 12%;
+    position: relative;
     font-size: 15px;
     font-weight: 300;
     line-height: 2;
@@ -326,7 +322,7 @@ li span {
 
 .review-card figure {
     position: relative;
-    top: 50px;
+    top: 110px;
 }
 
 .review-card img {
@@ -370,4 +366,79 @@ li span {
 .middle-card figcaption span {
     display: block;
     color: var(--color-terciario)
+}
+
+/* Estilos para el contenedor "blog" */
+.blog-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50vh;
+}
+
+.blog-content-column {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--color-secundario);
+}
+
+.blog-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.blog-text h2 {
+    font-size: 1.2em;
+    font-weight: 350;
+    margin-bottom: 5px;
+    color: var(--color-terciario);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.blog-text span {
+    display: block;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 6%;
+    color: var(--color-primario);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.blog-text p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+}
+
+.blog-figure-column {
+    background-repeat: no-repeat;
+    /* La imagen como fondo cubre toda la columna */
+    background-image: url('../img/model1.png'); 
+    background-size: 68%;
+    background-position: 25%; 
+}
+
+/* Estilos para el contenedor "form" */
+
+.contact-container {
+    height: 50%;
+    padding: 0 20%;
+}
+
+.contact-form {
+    width: 60%;
+    float: left;
+}
+
+.contact-list {
+    width: 40%;
+    float: right;
 }
