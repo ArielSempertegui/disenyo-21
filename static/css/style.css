@@ -254,9 +254,10 @@ li span {
 
 /* Estilos para la sección "reviews" */
 .reviews-section {
-    padding: 5% 0;
+    padding-top: 5%;
+    margin-bottom: 30px;
     text-align: center;
-    height: 100vh
+    min-height: 100vh;
 }
 
 .reviews-section h2 {
@@ -282,47 +283,45 @@ li span {
 
 /* Estilos para el contenedor de reviews */
 .reviews-container {
-    display: flex; /* Alinea las tarjetas horizontalmente */
-    justify-content: center; /* Centra las tarjetas en el medio */
-    align-items: start; /* Alinea las tarjetas en el top */
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start;
     gap: 30px; /* Espacio entre cada tarjeta */
     padding-top: 50px;
-    height: 50%;
 }
 
 .review-card {
-
     border-radius: 10px;
     width: 20%;
     color: var(--color-primario);
     background-color: var(--color-secundario);
-    position: relative;
+    min-height: 250px;
 }
 
-.review-card div {
+.review-card .icon {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    background-color: var(--color-terciario);
     border-radius: 50%;
     font-size: 3em;
-    transform: rotate(180deg);
-    position: absolute;
-    top: -30px;
-    
+    transform: rotate(180deg) translateY(30px);;
 }
 
 .review-card p {
-    position: relative;
     font-size: 15px;
     font-weight: 300;
     line-height: 2;
+    margin-top: 10px;
+    padding: 0 40px;
 }
 
 .review-card figure {
-    position: relative;
-    top: 110px;
+    height: 90px;
+    transform: translateY(40px);
 }
 
 .review-card img {
@@ -349,30 +348,46 @@ li span {
 
 .middle-card {
     background-color: var(--color-terciario);
-    height: 100%;
+    z-index: 10;
 }
 
-.middle-card div {
+.middle-card .icon {
     background-color: var(--color-secundario);
-    position: relative;
-    top: 0px;
 }
 
 .middle-card figure {
-    position: relative;
-    top: 70px;
+    height: 120px;
+    transform: translateY(60px);
 }
 
 .middle-card figcaption span {
-    display: block;
     color: var(--color-terciario)
+}
+
+.paginable {
+    margin-top: 180px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    gap: 10px;
+}
+
+.dots {
+    height: 10px;
+    width: 10px;
+    border: 2px solid var(--color-secundario);
+    border-radius: 50%;
+}
+
+#selected-dot {
+    background-color: var(--color-secundario);
 }
 
 /* Estilos para el contenedor "blog" */
 .blog-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 50vh;
+    height: 55vh;
 }
 
 .blog-content-column {
@@ -421,9 +436,9 @@ li span {
 .blog-figure-column {
     background-repeat: no-repeat;
     /* La imagen como fondo cubre toda la columna */
-    background-image: url('../img/model1.png'); 
-    background-size: 68%;
-    background-position: 25%; 
+    background-image: url('../img/model7.png'); 
+    background-size: cover;
+    background-position: center;
 }
 
 /* Estilos para el contenedor "form" */
