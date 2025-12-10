@@ -20,6 +20,7 @@ h1 {
     display: none;
 }
 
+/* Estilos del "Header" */
 header {
     display: flex;
     justify-content: space-evenly;
@@ -31,6 +32,7 @@ header {
     z-index: 100; /*Aseguramops que el header esté encima del hero-section*/
 }
 
+/* Estilo del Logo*/
 #logo {
     display: flex;
     justify-content: center;
@@ -38,6 +40,7 @@ header {
     width: 10%;
 }
 
+/* Estilos del "Nav" */
 nav {
     width: 90%;
 }
@@ -54,7 +57,7 @@ nav li {
     width: 100%;
 }
 
-li a {
+nav li a {
     display: block;
     color: var(--color-primario);
     text-align: center;
@@ -64,6 +67,18 @@ li a {
 
 #selected {
     background-color: var(--color-terciario);
+}
+
+/* Estilos para los botones*/
+.btn {
+    display: inline-block;
+    color: var(--color-primario);
+    background-color: var(--color-terciario); 
+    padding: 15px 40px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 5rem;
+    text-decoration: none;
 }
 
 /* Estilos para la sección "Hero" */
@@ -115,20 +130,8 @@ li a {
     max-width: 400px;
 }
 
-.btn {
-    display: inline-block;
-    color: var(--color-primario);
-    background-color: var(--color-terciario); 
-    padding: 15px 40px;
-    margin-top: 20px;
-    font-size: 13px;
-    border-radius: 5rem;
-    text-decoration: none;
-}
-
 .hero-figure-column {
     background-repeat: no-repeat;
-    /* La imagen como fondo cubre toda la columna */
     background-image: url('../img/model1.png'); 
     background-size: 68%;
     background-position: 25% bottom; 
@@ -175,18 +178,20 @@ li a {
 
 .about-figure-column {
     background-repeat: no-repeat;
-    /* La imagen como fondo cubre toda la columna */
     background-image: url('../img/model2.png'); 
     background-size: 68%; 
     background-position: 75% bottom;  
 }
 
-/* Estilos para la sección de la "statistics" */
-.statistics-list {
+/* Estilos para la sección de la "Experince" */
+.experience-section {
+    padding: 50px 20px;
+}
+
+/* Espaciado entre elementos */
+.experience-section ul {
     list-style: none;
     text-align: center;
-    padding: 50px 20px; /* Espaciado superior e inferior para la sección */
-  
     /* Flexbox para centrar y distribuir los ítems */
     display: flex;
     justify-content: center; /* Centra los ítems horizontalmente en el contenedor */
@@ -195,7 +200,7 @@ li a {
 }
 
 /* List item individual (Centra el número y el texto) */
-.statistics-list li {
+.experience-section li {
     color: #333; /* Texto gris oscuro */
     font-weight: 600;
     letter-spacing: 1px;
@@ -203,7 +208,7 @@ li a {
 }
 
 /* Estilo para los Números Grandes */
-li span {
+.experience-section span {
     display: block;
     color: var(--color-numeros);
     font-size: 36px; 
@@ -212,7 +217,7 @@ li span {
     line-height: 1.2;
 }
 
-/*Estilo para la sección "gallery" */
+/*Estilo para la sección "Gallery" */
 .gallery-section {
     padding: 5% 30%;
     text-align: center;
