@@ -40,14 +40,18 @@ header {
 
 nav {
     width: 90%;
+
+    & ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+    }
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    width: 100%;
+
 }
 
 nav li {
