@@ -401,10 +401,6 @@ li span {
 }
 
 .blog-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
@@ -442,28 +438,24 @@ li span {
 }
 
 /* Estilos para el contenedor "form" */
-
 .contact-container {
-    height: 400px;
+    min-height: 600px;
     display: grid;
-    grid-template-columns: 60% 40%;
-    gap: 20px;
+    grid-template-columns: 55% 45%;
 }
 
 .form-column{
     display: flex;
-    justify-content: end;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
 }
 
-/* Estilos Generales del Contenedor */
-.contact-form {
-    min-width: 500px;
+/* Estilos Generales del Contenedor "contact"*/
+form {
+    min-width: 650px;
     padding: 20px;
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Fondo blanco */
-    border-radius: 8px; /* Bordes ligeramente redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /* Estilos de los Grupos de Campos (para separación) */
@@ -476,19 +468,15 @@ li span {
 .form-group input[type="email"],
 .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 4px;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho */
+    padding: 15px 20px;
+    border: 1px solid var(--color-shadow); /* Borde gris claro */
     font-size: 16px;
-    color: #333; /* Color del texto */
-    transition: border-color 0.3s ease;
 }
 
 /* Estilo para el Textarea (el campo de Your Message) */
 .form-group textarea {
-    resize: vertical; /* Permite redimensionar solo verticalmente */
-    min-height: 150px; /* Altura mínima como en la imagen */
+    resize: none;
+    min-height: 150px;
 }
 
 /* Efecto Focus para Inputs y Textarea */
