@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-    --color-primario: #fff;
-    --color-secundario: #18191d;
-    --color-terciario: #d81732;
-    --color-shadow: #d5d5d5;
-    --color-light-shadow: #f7f8fb;
-    --color-numeros: #d71920; /* Color de los números */
+    --primary-color: #fff;
+    --secondary-color: #18191d;
+    --tertiary-color: #d81732;
+    --shadow-color: #d5d5d5;
+    --light-shadow-color: #f7f8fb;
+    --number-color: #d71920; /* Color de los números */
+    --two-columns: 1fr 1fr;
+    --padding-colums: 0 10%;
+    --ligh-weight: 300;
     font-family: "Roboto", sans-serif;
 
 }
@@ -16,20 +19,26 @@
     box-sizing: border-box;
 }
 
-h1 {
-    display: none;
-}
-
 /* Estilos del "Header" */
 header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--color-secundario);
+    background-color: var(--secondary-color);
     position: absolute;
     top: 45px;
     width: 45%;
     z-index: 100; /*Aseguramops que el header esté encima del hero-section*/
+}
+
+h1 {
+    display: none;
+}
+
+p {
+    margin: 30px 0;
+    font-weight: var(--ligh-weight);
+    line-height: 1.6;
 }
 
 /* Estilo del Logo*/
@@ -59,21 +68,21 @@ nav li {
 
 nav li a {
     display: block;
-    color: var(--color-primario);
+    color: var(--primary-color);
     text-align: center;
     padding: 25px 16px;
     text-decoration: none;
 }
 
 #selected {
-    background-color: var(--color-terciario);
+    background-color: var(--tertiary-color);
 }
 
 /* Estilos para los botones*/
 .btn {
     display: inline-block;
-    color: var(--color-primario);
-    background-color: var(--color-terciario); 
+    color: var(--primary-color);
+    background-color: var(--tertiary-color); 
     padding: 15px 40px;
     margin-top: 20px;
     font-size: 13px;
@@ -82,55 +91,46 @@ nav li a {
 }
 
 /* Estilos para la sección "Hero" */
-.hero-section {
+.hero {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: var(--color-shadow);
+    grid-template-columns: var(--two-columns);
+    background-color: var(--shadow-color);
     height: 100vh;
 }
 
-.hero-section:nth-child(2) {
-    background-color: var(--color-secundario);
-}
-
-.hero-content-column {
-    padding: 0 10%;
+.hero-column {
+    padding: var(--padding-colums);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    position: relative;
 }
 
-.hero-text {
+.hero-column section {
     max-width: 500px;
+
+    & div {
+        font-size: 3.5em;
+        font-weight: 350;
+        margin-bottom: 5px;
+        color: var(--secondary-color);
+    }
+
+    & h2 {
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 1.1;
+        color: var(--secondary-color);
+    }
+
+    & p {
+        font-size: 18px;
+        font-weight: 400;
+        color: #333;
+    }
 }
 
-.hero-text h2 {
-    font-size: 3.5em;
-    font-weight: 350;
-    margin-bottom: 5px;
-    color: var(--color-secundario);
-}
-
-.hero-text span {
-    display: block;
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 1.1;
-    margin-bottom: 5%;
-    color: var(--color-secundario)
-}
-
-.hero-text p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 30px;
-    max-width: 400px;
-}
-
-.hero-figure-column {
+.hero figure {
     background-repeat: no-repeat;
     background-image: url('../img/model1.png'); 
     background-size: 68%;
@@ -138,45 +138,44 @@ nav li a {
 }
 
 /* Estilos para la sección "About" */
-.about-content-column {
-    padding: 0 10%;
+.about {
+    display: grid;
+    grid-template-columns: var(--two-columns);
+    background-color: var(--secondary-color);
+    height: 100vh;
+}
+
+.about-column {
+    padding: var(--padding-colums);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    position: relative;
 }
 
-.about-text {
+.about-column section {
     max-width: 500px;
+
+    & div {
+        font-size: 1.3em;
+        font-weight: var(--ligh-weight);
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    & h2 {
+        font-size: 60px;
+        font-weight: var(--ligh-weight);
+        line-height: 1.1;
+        color: var(--tertiary-color);
+    }
+
+    & p {
+        color: var(--primary-color);
+    }
 }
 
-.about-text h2 {
-    font-size: 1.3em;
-    font-weight: 300;
-    margin-bottom: 15px;
-    color: var(--color-primario);
-}
-
-.about-text span {
-    display: block;
-    font-size: 60px;
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 5%;
-    color: var(--color-terciario)
-}
-
-.about-text p {
-    font-size: 1em;
-    font-weight: 300;
-    line-height: 1.6;
-    color: var(--color-primario);
-    margin-bottom: 30px;
-    max-width: 400px;
-}
-
-.about-figure-column {
+.about figure {
     background-repeat: no-repeat;
     background-image: url('../img/model2.png'); 
     background-size: 68%; 
@@ -184,80 +183,85 @@ nav li a {
 }
 
 /* Estilos para la sección de la "Experince" */
-.experience-section {
+.experience {
     padding: 50px 20px;
+
+    /* Espaciado entre elementos */
+    & ul {
+        list-style: none;
+        text-align: center;
+        /* Flexbox para centrar y distribuir los ítems */
+        display: flex;
+        justify-content: center; /* Centra los ítems horizontalmente en el contenedor */
+        align-items: center;    /* Centra los ítems verticalmente (si fuera necesario) */
+        gap: 150px;              /* Espacio entre cada ítem */
+    }
+
+    /* List item individual (Centra el número y el texto) */
+    & li {
+        color: #333; /* Texto gris oscuro */
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* Estilo para los Números */
+    & span {
+        display: block;
+        color: var(--number-color);
+        font-size: 36px; 
+        font-weight: bold; /* Los números son más gruesos */
+        margin-bottom: 5px; /* Pequeño espacio entre el número y la descripción */
+        line-height: 1.2;
+    }
 }
 
-/* Espaciado entre elementos */
-.experience-section ul {
-    list-style: none;
-    text-align: center;
-    /* Flexbox para centrar y distribuir los ítems */
-    display: flex;
-    justify-content: center; /* Centra los ítems horizontalmente en el contenedor */
-    align-items: center;    /* Centra los ítems verticalmente (si fuera necesario) */
-    gap: 150px;              /* Espacio entre cada ítem */
-}
-
-/* List item individual (Centra el número y el texto) */
-.experience-section li {
-    color: #333; /* Texto gris oscuro */
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-/* Estilo para los Números Grandes */
-.experience-section span {
-    display: block;
-    color: var(--color-numeros);
-    font-size: 36px; 
-    font-weight: bold; /* Los números son más gruesos */
-    margin-bottom: 5px; /* Pequeño espacio entre el número y la descripción */
-    line-height: 1.2;
-}
 
 /*Estilo para la sección "Gallery" */
-.gallery-section {
+.gallery {
     padding: 5% 30%;
     text-align: center;
-    background-color: var(--color-light-shadow);
+    background-color: var(--light-shadow-color);
 }
 
-.gallery-section h2 {
-    color: rgba(229, 103, 120);
-    font-size: 22px; 
-    font-weight: 300;
-    margin-bottom: 15px;
-    line-height: 1.2;
+.common-article {
+    text-align: center;
+
+    & h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 3.5em;
+        font-weight: var(--ligh-weight);
+    }
+
+    & span {
+        color: rgba(229, 103, 120);
+        font-size: 22px; 
+        font-weight: var(--ligh-weight);
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    & p {
+        margin: 7.5% 0;
+        font-weight: var(--ligh-weight);
+        line-height: 1.6;
+    }
 }
 
-.gallery-section > span {
-    display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3.5em;
-}
-
-.gallery-section p {
-    margin: 7.5% 0;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-.gallery-section figcaption {
+.gallery figcaption {
     margin-top: 5%;
     line-height: 1.6;
     font-size: 1.8em;
     font-weight: 450;
+
+    & span {
+        display: block;
+        font-size: 17px;
+        font-weight: 400;
+    }
 }
 
-.gallery-section figcaption span {
-    display: block;
-    font-size: 17px;
-    font-weight: 400;
-}
-
-/* Estilos para la sección "reviews" */
+/* Estilos para la sección "Reviews" */
 .reviews-section {
     padding-top: 5%;
     margin-bottom: 30px;
@@ -268,7 +272,7 @@ nav li a {
 .reviews-section h2 {
     color: rgba(229, 103, 120);
     font-size: 22px; 
-    font-weight: 300;
+    font-weight: var(--ligh-weight);
     margin-bottom: 15px;
     line-height: 1.2;
 }
@@ -282,7 +286,7 @@ nav li a {
 .reviews-section > p {
     margin: 3% 0;
     padding: 0 30%;
-    font-weight: 300;
+    font-weight: var(--ligh-weight);
     line-height: 1.6;
 }
 
@@ -298,8 +302,8 @@ nav li a {
 .review-card {
     border-radius: 10px;
     width: 20%;
-    color: var(--color-primario);
-    background-color: var(--color-secundario);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     min-height: 250px;
 }
 
@@ -310,15 +314,15 @@ nav li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-terciario);
+    background-color: var(--tertiary-color);
     border-radius: 50%;
     font-size: 3em;
-    transform: rotate(180deg) translateY(30px);;
+    transform: rotate(180deg) translateY(30px);
 }
 
 .review-card p {
     font-size: 15px;
-    font-weight: 300;
+    font-weight: var(--ligh-weight);
     line-height: 2;
     margin-top: 10px;
     padding: 0 40px;
@@ -337,7 +341,7 @@ nav li a {
 }
 
 .review-card figcaption {
-    color: var(--color-secundario);
+    color: var(--secondary-color);
     margin-top: 10px;
     font-size: 1.2em;
     font-weight: 800;
@@ -352,12 +356,12 @@ nav li a {
 }
 
 .middle-card {
-    background-color: var(--color-terciario);
+    background-color: var(--tertiary-color);
     z-index: 10;
 }
 
 .middle-card .icon {
-    background-color: var(--color-secundario);
+    background-color: var(--secondary-color);
 }
 
 .middle-card figure {
@@ -366,7 +370,7 @@ nav li a {
 }
 
 .middle-card figcaption span {
-    color: var(--color-terciario)
+    color: var(--tertiary-color)
 }
 
 .paginable {
@@ -380,18 +384,18 @@ nav li a {
 .dots {
     height: 10px;
     width: 10px;
-    border: 2px solid var(--color-secundario);
+    border: 2px solid var(--secondary-color);
     border-radius: 50%;
 }
 
 #selected-dot {
-    background-color: var(--color-secundario);
+    background-color: var(--secondary-color);
 }
 
-/* Estilos para el contenedor "blog" */
+/* Estilos para la sección "Blog" */
 .blog-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: var(--two-columns);
     height: 55vh;
 }
 
@@ -402,7 +406,7 @@ nav li a {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: var(--color-secundario);
+    background-color: var(--secondary-color);
 }
 
 .blog-text {
@@ -413,24 +417,24 @@ nav li a {
     font-size: 1.2em;
     font-weight: 350;
     margin-bottom: 5px;
-    color: var(--color-terciario);
+    color: var(--tertiary-color);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .blog-text span {
     display: block;
     font-size: 60px;
-    font-weight: 300;
+    font-weight: var(--ligh-weight);
     line-height: 1.1;
     margin-bottom: 6%;
-    color: var(--color-primario);
+    color: var(--primary-color);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .blog-text p {
     font-size: 1em;
     line-height: 1.6;
-    color: var(--color-primario);
+    color: var(--primary-color);
     margin-bottom: 30px;
 }
 
@@ -473,7 +477,7 @@ form {
 .form-group textarea {
     width: 100%;
     padding: 15px 20px;
-    border: 1px solid var(--color-shadow); /* Borde gris claro */
+    border: 1px solid var(--shadow-color); /* Borde gris claro */
     font-size: 16px;
 }
 

@@ -222,68 +222,68 @@ nav {
     padding: 5% 30%;
     text-align: center;
     background-color: var(--color-light-shadow);
+
+    & h2 {
+        color: rgba(229, 103, 120);
+        font-size: 22px; 
+        font-weight: 300;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    & > span {
+        display: block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 3.5em;
+    }
+
+    & p {
+        margin: 7.5% 0;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+
+    & figcaption {
+        margin-top: 5%;
+        line-height: 1.6;
+        font-size: 1.8em;
+        font-weight: 450;
+
+        & span {
+            display: block;
+            font-size: 17px;
+            font-weight: 400;
+        }
+    }
 }
 
-.gallery-section h2 {
-    color: rgba(229, 103, 120);
-    font-size: 22px; 
-    font-weight: 300;
-    margin-bottom: 15px;
-    line-height: 1.2;
-}
-
-.gallery-section > span {
-    display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3.5em;
-}
-
-.gallery-section p {
-    margin: 7.5% 0;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-.gallery-section figcaption {
-    margin-top: 5%;
-    line-height: 1.6;
-    font-size: 1.8em;
-    font-weight: 450;
-}
-
-.gallery-section figcaption span {
-    display: block;
-    font-size: 17px;
-    font-weight: 400;
-}
-
-/* Estilos para la sección "reviews" */
+/* Estilos para la sección "Reviews" */
 .reviews-section {
     padding-top: 5%;
     margin-bottom: 30px;
     text-align: center;
     min-height: 100vh;
-}
 
-.reviews-section h2 {
-    color: rgba(229, 103, 120);
-    font-size: 22px; 
-    font-weight: 300;
-    margin-bottom: 15px;
-    line-height: 1.2;
-}
+    & h2 {
+        color: rgba(229, 103, 120);
+        font-size: 22px; 
+        font-weight: 300;
+        margin-bottom: 15px;
+        line-height: 1.2;        
+    }
 
-.reviews-section > span {
-    display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3.5em;
-}
+    & > span {
+        display: block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 3.5em;
+    }
 
-.reviews-section > p {
-    margin: 3% 0;
-    padding: 0 30%;
-    font-weight: 300;
-    line-height: 1.6;
+    & > p {
+        margin: 3% 0;
+        padding: 0 30%;
+        font-weight: 300;
+        line-height: 1.6;
+    }
 }
 
 /* Estilos para el contenedor de reviews */
@@ -295,78 +295,80 @@ nav {
     padding-top: 50px;
 }
 
+/* Estilo del card de reviews */
 .review-card {
     border-radius: 10px;
     width: 20%;
     color: var(--color-primario);
     background-color: var(--color-secundario);
     min-height: 250px;
-}
 
-.review-card .icon {
-    margin: 0 auto;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-terciario);
-    border-radius: 50%;
-    font-size: 3em;
-    transform: rotate(180deg) translateY(30px);;
-}
+    & .icon {
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-terciario);
+        border-radius: 50%;
+        font-size: 3em;
+        transform: rotate(180deg) translateY(30px);
+    }
 
-.review-card p {
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 2;
-    margin-top: 10px;
-    padding: 0 40px;
-}
+    & p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 2;
+        margin-top: 10px;
+        padding: 0 40px;
+    }
 
-.review-card figure {
-    height: 90px;
-    transform: translateY(40px);
-}
+    & figure {
+        height: 90px;
+        transform: translateY(40px);
+    }
 
-.review-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-}
+    & img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        
+    }
 
-.review-card figcaption {
-    color: var(--color-secundario);
-    margin-top: 10px;
-    font-size: 1.2em;
-    font-weight: 800;
-}
+    & figcaption {
+        color: var(--color-secundario);
+        margin-top: 10px;
+        font-size: 1.2em;
+        font-weight: 800;
 
-.review-card figcaption span {
-    display: block;
-    color:#444;
-    font-size: 16px;
-    margin-top: 10px;
-    font-weight: 350;
+        & span {
+            display: block;
+            color:#444;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: 350;
+        }
+    }
 }
 
 .middle-card {
     background-color: var(--color-terciario);
     z-index: 10;
-}
 
-.middle-card .icon {
-    background-color: var(--color-secundario);
-}
+    & .icon {
+        background-color: var(--color-secundario);
+    }
 
-.middle-card figure {
-    height: 120px;
-    transform: translateY(60px);
-}
+    & figure {
+        height: 120px;
+        transform: translateY(60px);
+    }
 
-.middle-card figcaption span {
-    color: var(--color-terciario)
+    & figcaption span {
+        color: var(--color-terciario)
+    }
 }
 
 .paginable {
@@ -388,7 +390,7 @@ nav {
     background-color: var(--color-secundario);
 }
 
-/* Estilos para el contenedor "blog" */
+/* Estilos para la sección "Blog" */
 .blog-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -407,31 +409,31 @@ nav {
 
 .blog-text {
     text-align: center;
-}
 
-.blog-text h2 {
-    font-size: 1.2em;
-    font-weight: 350;
-    margin-bottom: 5px;
-    color: var(--color-terciario);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+    & h2 {
+        font-size: 1.2em;
+        font-weight: 350;
+        margin-bottom: 5px;
+        color: var(--color-terciario);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
-.blog-text span {
-    display: block;
-    font-size: 60px;
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 6%;
-    color: var(--color-primario);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+    & span {
+        display: block;
+        font-size: 60px;
+        font-weight: 300;
+        line-height: 1.1;
+        margin-bottom: 6%;
+        color: var(--color-primario);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
-.blog-text p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: var(--color-primario);
-    margin-bottom: 30px;
+    & p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: var(--color-primario);
+        margin-bottom: 30px;
+    }
 }
 
 .blog-figure-column {
