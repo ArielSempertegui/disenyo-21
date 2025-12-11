@@ -12,7 +12,7 @@
     
     <header>
         <h1>Clínica Dr. Warrior</h1>
-        <div id="logo">
+        <div id="web-logo">
             <img src="static/img/favicon.png" alt="Logo de la Clínica Dr. Warrior">
         </div>
         <nav>
@@ -27,32 +27,30 @@
     </header>
 
     <main>
-        <div class="hero">
-            <div class="hero-column">
-                <article>
-                    <span>Skin Specialist</span>
-                    <h2>Beautify Yourself</h2>
-                    <p>Donec Quis Nunc Mollis. Tincidunt Mi Vel, Pellentesque Arcu. Nam Nec Tristique Ex. Vitae Posuere Enim, Nunc Vulputate Metus Id Ex Pretium Fermentum.</p>
-                    <a class="btn" href="#">Learn More</a>
-                </article>
-            </div>
+        <div class="hero-container">
+            <article>
+                <span>Skin Specialist</span>
+                <h2>Beautify Yourself</h2>
+                <p>Donec Quis Nunc Mollis. Tincidunt Mi Vel, Pellentesque Arcu. Nam Nec Tristique Ex. Vitae Posuere Enim, Nunc Vulputate Metus Id Ex Pretium Fermentum.</p>
+                <a class="btn" href="#">Learn More</a>
+            </article>
             <figure></figure>
         </div>
 
-        <div class="about">
+        <div class="about-container">
             <figure></figure>
-            <div class="about-column">
-                <article>
-                    <span>Information about me</span>
-                    <h2>Dr. John Warrior</h2>
-                    <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.</p>
-                    <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend</p>
-                    <a class="btn" href="#">Book Appointment</a>
-                </article>
-            </div>
+            <article>
+                <span>Information about me</span>
+                <h2>Dr. John Warrior</h2>
+                <p>
+                    Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. <br><br>
+                    Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend
+                </p>
+                <a class="btn" href="#">Book Appointment</a>
+            </article>
         </div>
 
-        <div class="experience">
+        <div class="experience-container">
             <ul>
                 <li><span>865</span>total cases</li>
                 <li><span>510</span>skin surgeries</li>
@@ -61,7 +59,7 @@
             </ul>
         </div>
 
-        <div class="gallery">
+        <div class="gallery-container">
             <article class="common-article">
                 <span>Skin Treatments</span>
                 <h2>Patient Gallery</h2>
@@ -76,12 +74,13 @@
             </figure>
         </div>
 
-        <section class="reviews-section">
-            <h2>Reviews About Me</h2>
-            <span>Happy People</span>
-            <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum has been the industry's standard dummy.</p>
-
-            <div class="reviews-container">
+        <div class="reviews-container">
+            <article class="common-article">
+                <span>Reviews About Me</span>
+                <h2>Happy People</h2>
+                <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum has been the industry's standard dummy.</p>
+            </article>
+            <div class="reviews-section">
                 <article class="review-card">
                     <div class="icon">
                         <i class="bi bi-quote"></i>
@@ -130,21 +129,19 @@
                 <span class="dots"></span>
                 <span class="dots"></span>
             </div>
-        </section>
+        </div>
 
-        <section class="blog-section">
-            <div class="blog-content-column">
-                <article class="blog-text">
-                    <h2>Read Our Blog</h2>
-                    <span>Beautiful Skin Tips</span>
-                    <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.</p>
-                    <a class="btn" href="#">Read Full Story</a>
-                </article>
-            </div>
-            <div class="blog-figure-column"></div>
-        </section>
+        <div class="blog-container">
+            <article>
+                <span>Read Our Blog</span>
+                <h2>Beautiful Skin Tips</h2>
+                <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.</p>
+                <a class="btn" href="#">Read Full Story</a>
+            </article>
+            <figure></figure>
+        </div>
 
-        <section class="reviews-section">
+        <div class="reviews-section">
             <h2>Book Your Appointment</h2>
             <span>Need Skin Treatment?</span>
             <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -184,7 +181,7 @@
                 </div>
                 
             </div>
-        </section>
+        </div>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7506.866992027527!2d-73.97958455215144!3d40.75226125132637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2590228afbc85%3A0x852f802aebe53dec!2s123%20Park%20Ave%2C%20New%20York%2C%20NY%2010170%2C%20EE.%20UU.!5e1!3m2!1ses!2ses!4v1761842523160!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
