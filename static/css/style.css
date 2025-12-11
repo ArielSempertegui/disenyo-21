@@ -106,10 +106,11 @@ nav li a {
     align-items: end;
 }
 
-.hero-column section {
+.hero-column article {
     max-width: 500px;
 
-    & div {
+    & span {
+        display: block;
         font-size: 3.5em;
         font-weight: 350;
         margin-bottom: 5px;
@@ -153,10 +154,11 @@ nav li a {
     align-items: start;
 }
 
-.about-column section {
+.about-column article {
     max-width: 500px;
 
-    & div {
+    & span {
+        display: block;
         font-size: 1.3em;
         font-weight: var(--ligh-weight);
         margin-bottom: 15px;
@@ -216,17 +218,16 @@ nav li a {
     }
 }
 
-
 /*Estilo para la sección "Gallery" */
 .gallery {
-    padding: 5% 30%;
-    text-align: center;
+    padding: 5% 0;
     background-color: var(--light-shadow-color);
 }
 
 .common-article {
     text-align: center;
-
+    padding: 0 30%;
+    
     & h2 {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 3.5em;
@@ -240,12 +241,14 @@ nav li a {
         margin-bottom: 15px;
         line-height: 1.2;
     }
+}
 
-    & p {
-        margin: 7.5% 0;
-        font-weight: var(--ligh-weight);
-        line-height: 1.6;
-    }
+.gallery figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .gallery figcaption {
