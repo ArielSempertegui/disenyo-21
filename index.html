@@ -32,7 +32,7 @@
                 <span>Skin Specialist</span>
                 <h2>Beautify Yourself</h2>
                 <p>Donec Quis Nunc Mollis. Tincidunt Mi Vel, Pellentesque Arcu. Nam Nec Tristique Ex. Vitae Posuere Enim, Nunc Vulputate Metus Id Ex Pretium Fermentum.</p>
-                <a class="btn" href="#">Learn More</a>
+                <a class="button" href="#">Learn More</a>
             </article>
             <figure></figure>
         </div>
@@ -46,7 +46,7 @@
                     Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. <br><br>
                     Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend
                 </p>
-                <a class="btn" href="#">Book Appointment</a>
+                <a class="button" href="#">Book Appointment</a>
             </article>
         </div>
 
@@ -80,7 +80,8 @@
                 <h2>Happy People</h2>
                 <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum has been the industry's standard dummy.</p>
             </article>
-            <div class="reviews-section">
+            <section>
+                <h2>Reviews</h2>
                 <article class="review-card">
                     <div class="icon">
                         <i class="bi bi-quote"></i>
@@ -122,12 +123,12 @@
                         </figcaption>
                     </figure>
                 </article>
-            </div>
+            </section>
             <div class="paginable">
-                <span class="dots" id="selected-dot"></span>
-                <span class="dots"></span>
-                <span class="dots"></span>
-                <span class="dots"></span>
+                <span class="dot" id="dot-selected"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
 
@@ -136,40 +137,36 @@
                 <span>Read Our Blog</span>
                 <h2>Beautiful Skin Tips</h2>
                 <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.</p>
-                <a class="btn" href="#">Read Full Story</a>
+                <a class="button" href="#">Read Full Story</a>
             </article>
             <figure></figure>
         </div>
 
-        <div class="reviews-section">
-            <h2>Book Your Appointment</h2>
-            <span>Need Skin Treatment?</span>
-            <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum has been the industry's standard dummy.</p>
+        <div class="reviews-container">
+            <article class="common-article">
+                <span>Book Your Appointment</span>
+                <h2>Need Skin Treatment?</h2>
+                <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum has been the industry's standard dummy.</p>
+            </article>
 
             <div class="contact-container">
-                <div class="form-column">
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <input type="text" name="nombre" placeholder="Your Name">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" name="correo" placeholder="Email Address *" required> 
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject">
-                        </div>
-
-                        <div class="form-group">
-                            <textarea name="mensaje" placeholder="Your Message"></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-button">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                <form action="#" method="post">
+                    <div>
+                        <input type="text" name="nombre" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <input type="email" name="correo" placeholder="Email Address *" required> 
+                    </div>
+                    <div>
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+                    <div>
+                        <textarea name="mensaje" placeholder="Your Message"></textarea>
+                    </div>
+                    <input type="submit" class="button">
+                        
+                    </input>
+                </form>
 
                 <div class="list-column">
                     <ul>

@@ -79,7 +79,7 @@ nav li a {
 }
 
 /* Estilos para los botones*/
-.btn {
+.button {
     display: inline-block;
     color: var(--primary-color);
     background-color: var(--tertiary-color); 
@@ -88,6 +88,7 @@ nav li a {
     font-size: 13px;
     border-radius: 5rem;
     text-decoration: none;
+    border: none;
 }
 
 /* Estilos para la sección "Hero" */
@@ -260,17 +261,21 @@ nav li a {
 /* Estilos para la sección "Reviews" */
 .reviews-container {
     padding: 5% 0;
-    text-align: center;
     min-height: 100vh;
 }
 
-/* Estilos para el contenedor de reviews */
-.reviews-section {
+/* Estilos para la sección de reviews */
+.reviews-container section {
     display: flex; 
     justify-content: center; 
     align-items: flex-start;
+    text-align: center;
     gap: 30px; /* Espacio entre cada tarjeta */
     margin-top: 100px;
+
+    & h2 {
+        display: none;
+    }
 }
 
 .review-card {
@@ -346,21 +351,21 @@ nav li a {
 }
 
 .paginable {
-    margin-top: 180px;
+    height: 180px;
     display: flex;
     justify-content: center;
-    font-size: 40px;
+    align-items: end;
     gap: 10px;
 }
 
-.dots {
-    height: 10px;
-    width: 10px;
+.dot {
+    height: 12px;
+    width: 12px;
     border: 2px solid var(--secondary-color);
     border-radius: 50%;
 }
 
-#selected-dot {
+#dot-selected {
     background-color: var(--secondary-color);
 }
 
@@ -408,35 +413,26 @@ nav li a {
     background-position: center;
 }
 
-/* Estilos para el contenedor "form" */
+/* Estilos para el contenedor "Form" */
 .contact-container {
-    min-height: 600px;
     display: grid;
     grid-template-columns: 55% 45%;
 }
 
-.form-column{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-}
-
 /* Estilos Generales del Contenedor "contact"*/
 form {
-    min-width: 650px;
+    margin-left: 35%;
+    min-height: 600px;
     padding: 20px;
-    font-family: Arial, sans-serif;
 }
 
 /* Estilos de los Grupos de Campos (para separación) */
-.form-group {
+form div {
     margin-bottom: 20px;
 }
 
 /* Estilos Comunes para Inputs y Textarea */
-.form-group input,
-.form-group textarea {
+input, textarea {
     width: 100%;
     padding: 15px 20px;
     border: 1px solid var(--shadow-color); /* Borde gris claro */
@@ -444,46 +440,30 @@ form {
 }
 
 /* Estilo para el Textarea (el campo de Your Message) */
-.form-group textarea {
+textarea {
     resize: none;
     min-height: 200px;
 }
 
 /* Efecto Focus para Inputs y Textarea */
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #c9002e; /* Borde rojo al enfocar */
+input:focus, textarea:focus {
+    border-color: #c9002e;
     outline: none; /* Elimina el contorno predeterminado del navegador */
     box-shadow: 0 0 5px rgba(201, 0, 46, 0.2); /* Sombra sutil al enfocar */
 }
 
 /* Estilo para el Placeholder (el texto dentro del campo) */
 ::placeholder {
-    color: #777; /* Gris más oscuro para el placeholder */
+    color: #999;
     opacity: 1; /* Asegura que sea visible en todos los navegadores */
 }
 
-/* Estilos del Botón de Enviar (Send Message) */
-.submit-button {
-    width: 100%;
-    background-color: #c9002e; /* El color rojo vibrante */
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-}
-
 /* Efecto Hover para el Botón */
-.submit-button:hover {
-    background-color: #a80027; /* Rojo un poco más oscuro al pasar el ratón */
-}
+/* .submit-button:hover {
+    background-color: #a80027; /* Rojo un poco más oscuro al pasar el ratón
+} */
 
 /* Efecto Active para el Botón (al ser presionado) */
-.submit-button:active {
-    transform: translateY(1px); /* Efecto de "presión" */
-}
+/* .submit-button:active {
+    transform: translateY(1px); /* Efecto de "presión"
+} */
