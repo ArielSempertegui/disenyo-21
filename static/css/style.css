@@ -35,6 +35,10 @@ h1 {
     display: none;
 }
 
+ul {
+    list-style: none;
+}
+
 p {
     margin: 30px 0;
     font-weight: var(--ligh-weight);
@@ -70,7 +74,6 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    list-style: none;
     width: 100%;
 }
 
@@ -183,7 +186,6 @@ nav li a {
 
     /* Espaciado entre elementos */
     & ul {
-        list-style: none;
         text-align: center;
         /* Flexbox para centrar y distribuir los ítems */
         display: flex;
@@ -415,9 +417,9 @@ nav li a {
 /* Estilos para el contenedor "Form" */
 .contact-container {
     display: grid;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 55% 1fr;
+    gap: 10px;
 }
-
 
 /* Estilos Generales del Contenedor "contact"*/
 form {
@@ -470,22 +472,43 @@ input[type="submit"]:hover {
 }
 
 .contact-container ul {
-    list-style: none;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     gap: 50px;
+    color: gray;
 
     & li {
         display: flex;
         align-items: center;
-        color: gray;
         gap: 20px;
 
         & i {
-            font-size: 32px;
+            font-size: 30px;
         }
+    }
+}
+
+footer {
+    padding: 5% 0;
+}
+
+footer section {
+    & h2 {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 50px
+    }
+
+    div{
+        margin-top: 30px;
+        text-align: center;
+        font-weight: bold;
     }
 }
