@@ -19,6 +19,14 @@
     box-sizing: border-box;
 }
 
+h1 {}
+
+h2 {}
+
+.hidden {
+    display: none;
+}
+
 /* Estilos del "Header" */
 header {
     display: flex;
@@ -29,16 +37,6 @@ header {
     top: 45px;
     width: 45%;
     z-index: 100; /*Aseguramops que el header esté encima del hero-section*/
-}
-
-/* Ocultar los h1 */
-h1 {
-    display: none;
-}
-
-/* Ocultar los h2 */
-h2 {
-    display: none;
 }
 
 /* Eliminar todos los puntos y decoraciones de las listas*/
