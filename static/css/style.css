@@ -29,16 +29,21 @@ h2 {}
     display: none;
 }
 
-/* Estilos del "Header" */
+
 header {
+    position: sticky;
+    top: 0;
+    margin-top: 45px;
+    width: 100%;
+    z-index: 100; /*Aseguramops que el header esté encima del hero-section*/
+}
+/* Estilos del "Header" */
+.navigation {
+    width: 45%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--secondary-color);
-    position: absolute;
-    top: 45px;
-    width: 45%;
-    z-index: 100; /*Aseguramops que el header esté encima del hero-section*/
 }
 
 /* Eliminar todos los puntos y decoraciones de las listas*/
@@ -67,6 +72,7 @@ p {
 
 /* Estilo del Logo*/
 #web-logo {
+    padding-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
