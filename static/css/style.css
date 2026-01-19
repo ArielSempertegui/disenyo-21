@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --primary-color: #fff;
+    --secondary-color: #18191d;
+    --tertiary-color: #d81732;
+    --shadow-color: #d5d5d5;
+    --light-shadow-color: #f7f8fb;
+    --number-color: #b1070c; /* Color de los números */
+    --two-columns: 1fr 1fr;
+    --light-weight: 300;
+    --h3-size: 60px;
+    font-family: "Roboto", sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+h1 {}
+
+h2 {}
+*/
+
+.hidden {
+    display: none;
+}
+
+
+header {
+    /* position: sticky;
+    top: 0;
+    margin-top: 45px;
+    margin-bottom: -115px; */
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    z-index: 100;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    width: 45%;
+
+    & a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Eliminar todos los puntos y decoraciones de las listas*/
+ul {
+    list-style: none;
+}
+
+/* Estilos Generales para los párrafos */
+p {
+    margin: 30px 0;
+    font-weight: var(--light-weight);
+    line-height: 1.6;
+}
+
+/* Estilos Generales para los botones*/
+.button {
+    color: var(--primary-color);
+    background-color: var(--tertiary-color); 
+    padding: 15px 40px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 5rem;
+    text-decoration: none;
+    border: none;
+
+    &:hover {
+        background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
+        background-color: var(--tertiary-color);
+    }
+}
+
+/* Estilo del Logo*/
+#logo {
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+/* 
+ * Estilos del de la Barra de Navegación 
+ */
+nav {
+    width: 90%;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+}
+
+nav li {
+    width: 100%;
+    height: 70px;
+}
+
+nav li a {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+#selected {
+    background-color: var(--tertiary-color);
+}
+
+/* 
+ * Estilos para la sección Hero 
+ */
+.hero-section {
+    display: grid;
+    grid-template-columns: var(--two-columns);
+    background-color: var(--shadow-color);
+    height: 100vh;
+}
+
+/* Estilos para el articulo de la sección hero */
+.hero-section article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 40%;
+    padding-right: 10%;
+
+    & span {
+        display: block;
+        font-size: 3.5em;
+        font-weight: 350;
+        margin-bottom: 5px;
+        color: var(--secondary-color);
+    }
+
+    & h3 {
+        font-size: var(--h3-size);
+        font-weight: 700;
+        color: var(--secondary-color);
+    }
+
+    & p {
+        font-size: 18px;
+        font-weight: 400;
+        color: #333;
+    }
+}
+
+/* Estilos para la imágen del hero */
+.hero-section figure {
+    background-repeat: no-repeat;
+    background-image: url('../img/model1.png'); 
+    background-size: 62%;
+    background-position: 25% bottom; 
+}
+
+/* 
+ * Estilos para la sección About 
+ */
+.about-section {
+    display: grid;
+    grid-template-columns: var(--two-columns);
+    direction: rtl;
+    background-color: var(--secondary-color);
+    height: 85vh;
+}
+
+/* Estilos para el articulo de la sección about */
+.about-section article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-left: 2%;
+    padding-right: 40%;
+    text-align: left;
+
+    & span {
+        display: block;
+        font-size: 1.3em;
+        font-weight: var(--light-weight);
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    & h3 {
+        font-size: var(--h3-size);
+        font-weight: var(--light-weight);
+        line-height: 1.1;
+        color: var(--tertiary-color);
+    }
+
+    & p {
+        color: var(--primary-color);
+    }
+}
+
+/* Estilos para la imágen de la sección about */
+.about-section figure {
+    background-repeat: no-repeat;
+    background-image: url('../img/model2.png'); 
+    background-size: 60%; 
+    background-position: right bottom;
+}
+
+/* 
+ * Estilos para la sección de la Experince
+ */
+.experience-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+
+    /* Espaciado entre elementos */
+
+
+    & ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(100px, 200px));
+        place-content: center;
+        gap: 5%;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+
+    /* List item individual (Centra el número y el texto) */
+    & li {
+        color: #333;            /* Texto gris oscuro */
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* Estilo para los Números */
+    & span {
+        display: block;
+        color: var(--number-color);
+        font-size: 36px; 
+        font-weight: 700;      /* Los números son más gruesos */
+        margin-bottom: 5px;     /* Pequeño espacio entre el número y la descripción */
+    }
+}
+
+/*
+ * Estilo para la sección Gallery
+ */
+.gallery-section {
+    padding: 100px 0;
+    background-color: var(--light-shadow-color);
+    text-align: center;
+
+    & figure {
+        margin-top: 50px;
+    }
+
+    & figcaption {
+        margin-top: 2%;
+        line-height: 1.6;
+        font-size: 1.8em;
+        font-weight: 450;
+
+        & span {
+            display: block;
+            font-size: 17px;
+            font-weight: 400;
+        }
+    }
+}
+
+/* 
+ * Estilos Generales para articulos de otras secciones
+ */
+.common-article {
+    text-align: center;
+    padding: 0 30%;
+
+    & span {
+        display: block;
+        color: rgba(229, 103, 120);
+        font-size: 23px; 
+        font-weight: var(--light-weight);
+        margin-bottom: 15px;
+    }
+
+    & h3 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: var(--h3-size);
+        font-weight: var(--light-weight);
+    }
+}
+
+/* 
+ * Estilos para la sección Reviews
+ */
+.reviews-section {
+    padding: 100px 0;
+}
+
+/* Estilos para la sección de comentarios de los usuarios */
+.reviews {
+    display: flex; 
+    justify-content: center; 
+    align-items: start;
+    text-align: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+/* Estilos para los asticulos dedicados de los usuarios*/
+.review {
+    border-radius: 10px;
+    width: 20%;
+    min-height: 250px;
+    padding: 0 40px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+
+    & .icon {
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--tertiary-color);
+        border-radius: 50%;
+        font-size: 3em;
+        transform: rotate(180deg) translateY(30px);
+    }
+
+    & p {
+        font-size: 15px;
+        line-height: 2;
+        margin-top: 10px;
+    }
+
+    & figure {
+        height: 90px;
+        transform: translateY(40px);
+    }
+
+    & img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    & figcaption {
+        color: var(--secondary-color);
+        margin-top: 10px;
+        font-size: 1.2em;
+        font-weight: 800;
+
+        & span {
+            display: block;
+            color:#444;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: 350;
+        }
+    }
+}
+
+/* Cambiar el color de fondo y tamaño de articulos pares */
+.main-review {
+    background-color: var(--tertiary-color);
+
+    & .icon {
+        background-color: var(--secondary-color);
+    }
+
+    & figure {
+        height: 120px;
+        transform: translateY(60px);
+    }
+
+    & figcaption span {
+        color: var(--tertiary-color)
+    }
+}
+
+/* Estilo de la paginación para navegar entre articulos de comentarios */
+.dots {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+}
+
+#dot-selected {
+    background-color: var(--secondary-color);
+}
+
+/* 
+ * Estilos para la sección Blog 
+ */
+.blog-section {
+    display: grid;
+    grid-template-columns: var(--two-columns);
+    background-color: var(--secondary-color);
+}
+
+/* Estilos para el articulo de la sección blog */
+.blog-section .common-article {
+    padding: 100px 10%;
+
+    & span {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 21px;
+        color: var(--tertiary-color);
+    }
+
+    & h3 {
+        color: var(--primary-color);
+    }
+
+    & p {
+        color: var(--primary-color);
+    }
+
+    .button {
+        display: inline-block;
+    }
+}
+
+/* Estilos para la imágen de la sección blog */
+.blog-section figure {
+    background-repeat: no-repeat;
+    /* La imagen como fondo cubre toda la columna */
+    background-image: url('../img/model7.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* 
+ * Estilos para la sección Appointment
+ */
+.appointment-section {
+    padding: 100px 0;
+}
+
+/* Estilos Generales del contenedor de Contacto */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 20px;
+}
+
+form {
+    margin-left: 40%;
+    min-height: 500px;
+    padding: 20px;
+}
+
+/* Estilos de los Grupos de Campos (para separación) */
+form div {
+    margin-bottom: 20px;
+}
+
+/* Estilos Comunes para Inputs y Textarea */
+input, textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid var(--shadow-color);      /* Borde gris claro */
+    font-size: 16px;
+}
+
+/* Estilo para el Textarea (el campo de Your Message) */
+textarea {
+    resize: none;
+    min-height: 200px;
+}
+
+/* Efecto Focus para Inputs y Textarea */
+input:focus, textarea:focus {
+    border-color: #c9002e;
+    outline: none;                              /* Elimina el contorno predeterminado del navegador */
+    box-shadow: 0 0 5px rgba(201, 0, 46, 0.2);/* Sombra sutil al enfocar */
+}
+
+/* Estilo para el Placeholder (el texto dentro del campo) */
+::placeholder {
+    color: #999;
+    opacity: 1; /* Asegura que sea visible en todos los navegadores */
+}
+
+/* Eliminar el margen-top por defecto de .button */
+input[type="submit"] {
+    margin-top: 0px;
+}
+
+/* Efecto Hover para el Botón */
+input[type="submit"]:hover {
+    background-color: #a80027; /* Rojo un poco más oscuro al pasar el ratón */
+    cursor: pointer;
+}
+
+/* Estilo para la lista de información de contancto y horario de la empresa */
+.contact-container ul {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+    color: gray;
+
+    & li {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        & i {
+            font-size: 30px;
+        }
+    }
+}
+
+iframe {
+    height: 500px;
+}
+
+/*
+ * Estilo para la sección del Footer
+ */
+.footer-section {
+    padding: 5% 0;
+
+    /* Redes Sociales*/
+    & ul {
+        display: flex;
+        justify-content: center;
+        gap: 50px
+    }
+
+    /* Licencias */
+    & div {
+        margin-top: 30px;
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+/* --- MEDIA QUERIES (Desktop-First) --- */
+
+@media (width <= 1440px) {
+    .navigation {
+        width: 65%;
+    }
+
+    .about-section figure {
+        background-position: bottom;
+    }
+    .experience-section {
+        height: 25vh;
+    }
+
+    .common-article {
+        padding: 0 15%; /* Reducimos márgenes laterales */
+    }
+
+    .review {
+        width: 25%;
+    }
+
+    .blog-section {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-section figure {
+        display: none;
+    }
+
+    form {
+        margin-left: 20%;
+    }
+}
+
+/* Ajustes para Tablets y Laptops pequeñas (menos de 1024px) */
+@media (width <= 1024px) {
+    .navigation {
+        width: 80%; /* Ampliamos la barra de navegación que tenías en 45% */
+    }
+
+    .hero-section article {
+        padding-left: 25%; /* Reducimos el padding del 40% al 25% */
+    }
+
+    .hero-section figure {
+        background-position: center 57%;
+    }
+
+    .about-section {
+        height: 65vh;
+    }
+
+    .about-section article {
+        padding-right: 15%;
+    }
+
+    .about-section figure {
+        background-position: center 65%;
+    }
+
+    .experience-section {
+        height: 20vh;
+
+        & ul {
+            gap: 0px;
+        }
+
+        & li {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        & span {
+            font-size: 2em;
+            font-weight: 600;
+        }
+    }
+
+    .gallery-section {
+
+        & img {
+            width: 50%;
+        }
+
+        & figcaption {
+            font-size: 1.6em;
+
+            & span {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .reviews {
+        gap: 20px;
+    }
+
+    .review {
+        width: 30%;
+        padding: 0 20px;
+    }
+
+    form {
+        margin-left: 10%;
+    }
+
+}
+
+/* Ajustes para Móviles Grandes y Tablets Verticales (menos de 768px) */
+@media (width <= 768px) {
+    header {
+        position: relative; /* Cambiamos de absolute a relative para que no flote sobre el contenido */
+        top: 0;
+    }
+
+    .navigation {
+        width: 100%;
+        flex-direction: column; /* El logo y el nav se apilan */
+    }
+
+    #logo{
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+
+        & li {
+            height: 60px;
+
+            & a {
+                padding: 15px 10px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .gallery-section, .reviews-section, .blog-section, .appointment-section, .footer-section {
+        padding: 50px 0;
+    }
+
+    .hero-section, .about-section {
+        grid-template-columns: 1fr; /* De 2 columnas a 1 sola */
+        height: auto; /* Dejamos que el contenido defina la altura */
+        padding-bottom: 0px;
+    }
+
+    .hero-section article, .about-section article {
+        padding: 40px 5%; /* Padding uniforme */
+        align-items: center; /* Centramos el texto en móvil */
+        text-align: center;
+    }
+
+    .hero-section figure, .about-section figure {
+        height: 400px; /* Damos una altura fija a la imagen en móvil */
+        background-size: contain;
+        background-position: center bottom;
+    }
+
+    .experience-section {
+        margin: 30px 0;
+        
+        & ul {
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: repeat(2, 100px);
+            place-items: center;
+        }
+    }
+
+    .gallery-section {
+
+        & figcaption {
+            font-size: 1.4em; /* Reducimos tamaño de fuente para que no rompa */
+        }
+    }
+
+    .common-article {
+        padding: 0 5%; /* Padding uniforme */
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        gap: 150px;
+    }
+
+    .review {
+        width: 80%;
+        min-height: 150px;
+
+        & p {
+            margin: 0;
+        }
+
+        & figure {
+            height: 65px;
+            transform: translateY(20px);
+        }
+
+        & figcaption {
+            margin-top: 0px;
+            font-size: 1em;
+            font-weight: 600;
+
+            & span {
+                font-size: 14px;
+                margin-top: 2px;
+            }
+        }
+    }
+
+    .main-review {
+        order: -1;
+
+        & figure {
+            height: 65px;
+            transform: translateY(20px);
+        }
+    }
+
+    .dots {
+        height: 150px;
+    }
+
+    .blog-section .common-article {
+        padding: 0px 5%;
+    }
+
+    .hero-section article, .about-section article, .common-article {
+        & span {
+            font-size: 2em;
+        }
+
+        & h3 {
+            font-size: 40px;
+        }
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    form {
+        margin-left: 0;
+    }
+
+    .contact-container ul {
+        margin: 0 auto;
+        gap: 30px;
+
+    }
+
+    iframe {
+        height: 350px;
+    }
+}
+
+/* Ajustes para Móviles Pequeños (menos de 480px) */
+@media (width <= 480px) {
+    nav ul {
+        display: block; /* Menú en lista vertical */
+
+        & li {
+            height: auto;
+        }
+    }
+
+    .hero-section, .about-section {
+        padding-top: 25px;
+    }
+
+    .hero-section article h3, .about-section article h3 {
+        font-size: 30px;
+    }
+    
+    .hero-section figure, .about-section figure {
+        height: 300px;
+    }
+
+    .gallery-section {
+        & img {
+            min-width: 200px;
+        }
+    }
+
+    .reviews {
+        gap: 130px;
+    }
+
+    .review {
+        width: 90%;
+        padding: 0 20px;
+
+        & .icon {
+            width: 45px;
+            height: 45px;
+            font-size: 30px;
+            transform: rotate(180deg) translateY(22px);
+        }
+
+        & img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .dots {
+        height: 125px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+
+    .footer-section {
+        padding-bottom: 20px;
+    }
+}
+
+
