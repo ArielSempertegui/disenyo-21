@@ -45,6 +45,7 @@ header {
 .navigation {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--secondary-color);
     width: 45%;
 
@@ -88,7 +89,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
 }
 
 /* 
@@ -167,7 +167,7 @@ nav li a {
 /* Estilos para la imágen del hero */
 .hero-section figure {
     background-repeat: no-repeat;
-    background-image: url('../img/model1.png'); 
+    background-image: url('../img/model1.webp'); 
     background-size: 62%;
     background-position: 25% bottom; 
 }
@@ -216,7 +216,7 @@ nav li a {
 /* Estilos para la imágen de la sección about */
 .about-section figure {
     background-repeat: no-repeat;
-    background-image: url('../img/model2.png'); 
+    background-image: url('../img/model2.webp'); 
     background-size: 60%; 
     background-position: right bottom;
 }
@@ -457,7 +457,7 @@ nav li a {
 .blog-section figure {
     background-repeat: no-repeat;
     /* La imagen como fondo cubre toda la columna */
-    background-image: url('../img/model7.png'); 
+    background-image: url('../img/model7.webp'); 
     background-size: cover;
     background-position: center;
 }
