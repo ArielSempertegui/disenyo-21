@@ -2,11 +2,34 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Ariel Sempertegui">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="static/img/milogo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <title>Multimedia</title>
 </head>
-<body>
-    
+<body class="bg-dark text-white">
+    <div class="container d-flex flex-column align-items-center gap-4">
+        <svg height="130" width="200">
+            <defs>
+                <linearGradient id="grad1">
+                    <stop offset="0%" stop-color="yellow" />
+                    <stop offset="50%" stop-color="red" />
+                    <stop offset="100%" stop-color="green" />
+                </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+            <text fill="#ffffff" font-size="45" font-family="Verdana" x="70" y="86">AS</text>
+            Sorry, your browser does not support inline SVG.
+        </svg>
+
+        <audio src="static/audio/audio-final.ogg" controls></audio>
+
+        <div>
+            <a href="https://example.com">Mix 2000</a> © 2026 by <a href="https://example.com">Ariel Sempertegui</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+            <p class="text-center small mt-2">Este audio es un ejercicio académico sin fines de lucro.</p>
+        </div>
+        
+    </div>
 </body>
 </html>
