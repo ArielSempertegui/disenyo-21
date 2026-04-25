@@ -42,10 +42,20 @@ p {
     line-height: 1.6;
 }
 
-a {
-    &:focus {
-        outline: 3px solid #007BFF;
-    }
+a:focus {
+    outline: 5px solid #007BFF;
+}
+
+a:hover {
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
+}
+
+audio:focus {
+    outline: 5px solid #007BFF;     
+}
+
+video:focus {
+    outline: 5px solid #007BFF;
 }
 
 /* Estilos Generales para los botones*/
@@ -58,11 +68,6 @@ a {
     border-radius: 5rem;
     text-decoration: none;
     border: none;
-
-    &:hover {
-        background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
-        background-color: var(--tertiary-color);
-    }
 }
 
 
@@ -83,10 +88,6 @@ header {
     align-items: center;
     background-color: var(--secondary-color);
     width: 45%;
-
-    & a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
 }
 
 /* Estilo del Logo*/
@@ -530,8 +531,12 @@ button[type="submit"] {
 
 /* Efecto Hover para el Botón */
 button[type="submit"]:hover {
-    background-color: #a80027; /* Rojo un poco más oscuro al pasar el ratón */
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
     cursor: pointer;
+}
+
+button[type="submit"]:focus {
+    outline: 5px solid #007BFF; 
 }
 
 /* Estilo para la lista de información de contancto y horario de la empresa */
