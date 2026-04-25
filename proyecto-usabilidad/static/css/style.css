@@ -30,12 +30,10 @@
     border: 0;
 }
 
-/* Eliminar todos los puntos y decoraciones de las listas*/
 ul {
     list-style: none;
 }
 
-/* Estilos Generales para los párrafos */
 p {
     margin: 30px 0;
     font-weight: var(--light-weight);
@@ -58,7 +56,6 @@ video:focus {
     outline: 5px solid #007BFF;
 }
 
-/* Estilos Generales para los botones*/
 .button {
     color: var(--primary-color);
     background-color: var(--tertiary-color); 
@@ -72,10 +69,6 @@ video:focus {
 
 
 header {
-    /* position: sticky;
-    top: 0;
-    margin-top: 45px;
-    margin-bottom: -115px; */
     position: absolute;
     top: 45px;
     width: 100%;
@@ -90,7 +83,6 @@ header {
     width: 45%;
 }
 
-/* Estilo del Logo*/
 #logo {
     padding-left: 20px;
     display: flex;
@@ -99,9 +91,6 @@ header {
     width: 10%;
 }
 
-/* 
- * Estilos del de la Barra de Navegación 
- */
 nav {
     width: 90%;
 
@@ -131,9 +120,6 @@ nav {
     }
 }
 
-/* 
- * Estilos para la sección Hero 
- */
 .hero-section {
     display: grid;
     grid-template-columns: var(--two-columns);
@@ -141,7 +127,6 @@ nav {
     height: 100vh;
 }
 
-/* Estilos para el articulo de la sección hero */
 .hero-section article {
     display: flex;
     flex-direction: column;
@@ -170,7 +155,6 @@ nav {
     }
 }
 
-/* Estilos para la imágen del hero */
 .hero-section figure {
     background-repeat: no-repeat;
     background-image: url('../../../proyecto-multimedia/static/img/model1.webp'); 
@@ -178,9 +162,6 @@ nav {
     background-position: 25% bottom; 
 }
 
-/* 
- * Estilos para la sección About 
- */
 .about-section {
     display: grid;
     grid-template-columns: var(--two-columns);
@@ -189,7 +170,6 @@ nav {
     height: 85vh;
 }
 
-/* Estilos para el articulo de la sección about */
 .about-section article {
     display: flex;
     flex-direction: column;
@@ -224,7 +204,6 @@ nav {
     }
 }
 
-/* Estilos para la imágen de la sección about */
 .about-section figure {
     background-repeat: no-repeat;
     background-image: url('../../../proyecto-multimedia/static/img/model2.webp'); 
@@ -232,16 +211,12 @@ nav {
     background-position: right bottom;
 }
 
-/* 
- * Estilos para la sección de la Experince
- */
 .experience-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30vh;
 
-    /* Espaciado entre elementos */
     & ul {
         width: 100%;
         display: grid;
@@ -252,27 +227,21 @@ nav {
         line-height: 1.5;
     }
 
-
-    /* List item individual (Centra el número y el texto) */
     & li {
         font-weight: 600;
         letter-spacing: 1px;
         text-transform: uppercase;
     }
 
-    /* Estilo para los Números */
     & span {
         display: block;
         color: var(--tertiary-color);
         font-size: 36px; 
-        font-weight: 700;      /* Los números son más gruesos */
-        margin-bottom: 5px;     /* Pequeño espacio entre el número y la descripción */
+        font-weight: 700;
+        margin-bottom: 5px;
     }
 }
 
-/*
- * Estilo para la sección Gallery
- */
 .gallery-section {
     padding: 100px 0;
     background-color: var(--light-shadow-color);
@@ -296,9 +265,6 @@ nav {
     }
 }
 
-/* 
- * Estilos Generales para articulos de otras secciones
- */
 .common-article {
     text-align: center;
     padding: 0 30%;
@@ -318,14 +284,10 @@ nav {
     }
 }
 
-/* 
- * Estilos para la sección Reviews
- */
 .reviews-section {
     padding: 100px 0;
 }
 
-/* Estilos para la sección de comentarios de los usuarios */
 .reviews {
     display: flex; 
     justify-content: center; 
@@ -335,7 +297,6 @@ nav {
     margin-top: 100px;
 }
 
-/* Estilos para los asticulos dedicados de los usuarios*/
 .review {
     border-radius: 10px;
     width: 20%;
@@ -390,7 +351,6 @@ nav {
     }
 }
 
-/* Cambiar el color de fondo y tamaño de articulos pares */
 .main-review {
     background-color: var(--tertiary-color);
 
@@ -408,7 +368,6 @@ nav {
     }
 }
 
-/* Estilo de la paginación para navegar entre articulos de comentarios */
 .dots {
     height: 180px;
     display: flex;
@@ -428,16 +387,12 @@ nav {
     background-color: var(--secondary-color);
 }
 
-/* 
- * Estilos para la sección Blog 
- */
 .blog-section {
     display: grid;
     grid-template-columns: var(--two-columns);
     background-color: var(--secondary-color);
 }
 
-/* Estilos para el articulo de la sección blog */
 .blog-section .common-article {
     padding: 100px 10%;
 
@@ -462,23 +417,17 @@ nav {
     }
 }
 
-/* Estilos para la imágen de la sección blog */
 .blog-section figure {
     background-repeat: no-repeat;
-    /* La imagen como fondo cubre toda la columna */
     background-image: url('../../../proyecto-multimedia/static/img/model7.webp'); 
     background-size: cover;
     background-position: center;
 }
 
-/* 
- * Estilos para la sección Appointment
- */
 .appointment-section {
     padding: 100px 0;
 }
 
-/* Estilos Generales del contenedor de Contacto */
 .contact-container {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -491,12 +440,10 @@ form {
     padding: 20px;
 }
 
-/* Estilos de los Grupos de Campos (para separación) */
 form div {
     margin-bottom: 20px;
 }
 
-/* Estilos Comunes para Inputs y Textarea */
 input, textarea {
     width: 100%;
     padding: 15px 20px;
@@ -504,32 +451,27 @@ input, textarea {
     font-size: 16px;
 }
 
-/* Estilo para el Textarea (el campo de Your Message) */
 textarea {
     resize: none;
     min-height: 200px;
 }
 
-/* Efecto Focus para Inputs y Textarea */
 input:focus, textarea:focus {
-    outline: none;                              /* Elimina el contorno predeterminado del navegador */
-    box-shadow: 0 0 5px rgba(201, 0, 46, 1); /* Sombra sutil al enfocar */
+    outline: none;
+    box-shadow: 0 0 5px rgba(201, 0, 46, 1);
 }
 
-/* Estilo para el Placeholder (el texto dentro del campo) */
 ::placeholder {
     color: var(--secondary-color);
     opacity: 1;
 }
 
-/* Eliminar el margen-top por defecto de .button */
 button[type="submit"] {
     margin-top: 0px;
     width: 100%;
     cursor: pointer;
 }
 
-/* Efecto Hover para el Botón */
 button[type="submit"]:hover {
     background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
     cursor: pointer;
@@ -539,7 +481,6 @@ button[type="submit"]:focus {
     outline: 5px solid #007BFF; 
 }
 
-/* Estilo para la lista de información de contancto y horario de la empresa */
 .contact-container ul {
     padding: 20px;
     display: flex;
@@ -572,27 +513,21 @@ button[type="submit"]:focus {
     height: 500px;
 }
 
-/*
- * Estilo para la sección del Footer
- */
 .footer-section {
     padding: 3% 0px;
-    /* Redes Sociales*/
+
     & ul {
         display: flex;
         justify-content: center;
         gap: 50px
     }
 
-    /* Licencias */
     & div {
         margin-top: 30px;
         text-align: center;
         font-weight: 700;
     }
 }
-
-/* --- MEDIA QUERIES (Desktop-First) --- */
 
 @media (width <= 1440px) {
     .navigation {
@@ -607,7 +542,7 @@ button[type="submit"]:focus {
     }
 
     .common-article {
-        padding: 0 15%; /* Reducimos márgenes laterales */
+        padding: 0 15%;
     }
 
     .review {
@@ -631,14 +566,13 @@ button[type="submit"]:focus {
     }
 }
 
-/* Ajustes para Tablets y Laptops pequeñas (menos de 1024px) */
 @media (width <= 1024px) {
     .navigation {
-        width: 80%; /* Ampliamos la barra de navegación que tenías en 45% */
+        width: 80%;
     }
 
     .hero-section article {
-        padding-left: 25%; /* Reducimos el padding del 40% al 25% */
+        padding-left: 25%;
     }
 
     .hero-section figure {
@@ -708,16 +642,15 @@ button[type="submit"]:focus {
     }
 }
 
-/* Ajustes para Móviles Grandes y Tablets Verticales (menos de 768px) */
 @media (width <= 768px) {
     header {
-        position: relative; /* Cambiamos de absolute a relative para que no flote sobre el contenido */
+        position: relative;
         top: 0;
     }
 
     .navigation {
         width: 100%;
-        flex-direction: column; /* El logo y el nav se apilan */
+        flex-direction: column;
     }
 
     #logo{
@@ -742,19 +675,19 @@ button[type="submit"]:focus {
     }
 
     .hero-section, .about-section {
-        grid-template-columns: 1fr; /* De 2 columnas a 1 sola */
-        height: auto; /* Dejamos que el contenido defina la altura */
+        grid-template-columns: 1fr;
+        height: auto;
         padding-bottom: 0px;
     }
 
     .hero-section article, .about-section article {
-        padding: 40px 5%; /* Padding uniforme */
-        align-items: center; /* Centramos el texto en móvil */
+        padding: 40px 5%;
+        align-items: center;
         text-align: center;
     }
 
     .hero-section figure, .about-section figure {
-        height: 400px; /* Damos una altura fija a la imagen en móvil */
+        height: 400px;
         background-size: contain;
         background-position: center bottom;
     }
@@ -772,12 +705,12 @@ button[type="submit"]:focus {
     .gallery-section {
 
         & figcaption {
-            font-size: 1.4em; /* Reducimos tamaño de fuente para que no rompa */
+            font-size: 1.4em;
         }
     }
 
     .common-article {
-        padding: 0 5%; /* Padding uniforme */
+        padding: 0 5%;
     }
 
     .reviews {
@@ -840,7 +773,7 @@ button[type="submit"]:focus {
     }
 
     .contact-container {
-        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-columns: 1fr;
     }
 
     form {
@@ -866,10 +799,9 @@ button[type="submit"]:focus {
     }
 }
 
-/* Ajustes para Móviles Pequeños (menos de 480px) */
 @media (width <= 480px) {
     nav ul {
-        display: block; /* Menú en lista vertical */
+        display: block;
 
         & li {
             height: auto;
