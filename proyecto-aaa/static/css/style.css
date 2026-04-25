@@ -3,8 +3,9 @@
     --primary-color: #ffffff;
     --secondary-color: #18191d;
     --tertiary-color: #AB0E24;
-    --shadow-color: #d5d5d5;
+        --shadow-color: #d5d5d5;
     --light-shadow-color: #f7f8fb;
+    --pink-color: #FF7D8F;
     --two-columns: 1fr 1fr;
     --light-weight: 300;
     --h3-size: 60px;
@@ -29,6 +30,41 @@
     border: 0;
 }
 
+/* Eliminar todos los puntos y decoraciones de las listas*/
+ul {
+    list-style: none;
+}
+
+/* Estilos Generales para los párrafos */
+p {
+    margin: 30px 0;
+    font-weight: var(--light-weight);
+    line-height: 1.6;
+}
+
+a {
+    &:focus {
+        outline: 3px solid #007BFF;
+    }
+}
+
+/* Estilos Generales para los botones*/
+.button {
+    color: var(--primary-color);
+    background-color: var(--tertiary-color); 
+    padding: 15px 40px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 5rem;
+    text-decoration: none;
+    border: none;
+
+    &:hover {
+        background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
+        background-color: var(--tertiary-color);
+    }
+}
+
 
 header {
     /* position: sticky;
@@ -50,35 +86,6 @@ header {
 
     & a:hover {
         background-color: rgba(255, 255, 255, 0.2);
-    }
-}
-
-/* Eliminar todos los puntos y decoraciones de las listas*/
-ul {
-    list-style: none;
-}
-
-/* Estilos Generales para los párrafos */
-p {
-    margin: 30px 0;
-    font-weight: var(--light-weight);
-    line-height: 1.6;
-}
-
-/* Estilos Generales para los botones*/
-.button {
-    color: var(--primary-color);
-    background-color: var(--tertiary-color); 
-    padding: 15px 40px;
-    margin-top: 20px;
-    font-size: 13px;
-    border-radius: 5rem;
-    text-decoration: none;
-    border: none;
-
-    &:hover {
-        background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
-        background-color: var(--tertiary-color);
     }
 }
 
@@ -203,7 +210,7 @@ nav {
         font-size: var(--h3-size);
         font-weight: var(--light-weight);
         line-height: 1.1;
-        color: #FF7D8F;
+        color: var(--pink-color);
     }
 
     & p {
@@ -211,7 +218,7 @@ nav {
     }
 
     & .button {
-        background-color: #ff7d8f;
+        background-color: var(--pink-color);
         color: var(--secondary-color);
     }
 }
@@ -297,7 +304,7 @@ nav {
 
     & span {
         display: block;
-        color: #E56778;
+        color: var(--tertiary-color);
         font-size: 23px; 
         font-weight: var(--light-weight);
         margin-bottom: 15px;
@@ -436,7 +443,7 @@ nav {
     & span {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 21px;
-        color: #ff7d8f;
+        color: var(--pink-color);
     }
 
     & h3 {
@@ -449,6 +456,8 @@ nav {
 
     .button {
         display: inline-block;
+        background-color: var(--pink-color);
+        color: var(--secondary-color);
     }
 }
 
@@ -490,7 +499,7 @@ form div {
 input, textarea {
     width: 100%;
     padding: 15px 20px;
-    border: 1px solid var(--shadow-color);      /* Borde gris claro */
+    border: 1px solid var(--tertiary-color);
     font-size: 16px;
 }
 
@@ -502,24 +511,25 @@ textarea {
 
 /* Efecto Focus para Inputs y Textarea */
 input:focus, textarea:focus {
-    border-color: #c9002e;
     outline: none;                              /* Elimina el contorno predeterminado del navegador */
-    box-shadow: 0 0 5px rgba(201, 0, 46, 0.2);/* Sombra sutil al enfocar */
+    box-shadow: 0 0 5px rgba(201, 0, 46, 1); /* Sombra sutil al enfocar */
 }
 
 /* Estilo para el Placeholder (el texto dentro del campo) */
 ::placeholder {
-    color: #999;
-    opacity: 1; /* Asegura que sea visible en todos los navegadores */
+    color: var(--secondary-color);
+    opacity: 1;
 }
 
 /* Eliminar el margen-top por defecto de .button */
-input[type="submit"] {
+button[type="submit"] {
     margin-top: 0px;
+    width: 100%;
+    cursor: pointer;
 }
 
 /* Efecto Hover para el Botón */
-input[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: #a80027; /* Rojo un poco más oscuro al pasar el ratón */
     cursor: pointer;
 }
@@ -532,7 +542,7 @@ input[type="submit"]:hover {
     justify-content: center;
     align-items: start;
     gap: 50px;
-    color: gray;
+    color: var(--secondary-color);
 
     & li {
         display: flex;
