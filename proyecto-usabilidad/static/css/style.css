@@ -508,6 +508,12 @@ button[type="submit"]:focus {
     gap:30px;
 }
 
+
+.youtube {
+    width: 560px;
+    background-image: url('https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg');
+}
+
 .map {
     height: 500px;
 }
@@ -872,7 +878,7 @@ button[type="submit"]:focus {
     }
 
     .youtube {
-        width: auto;
+        width: 300px;
     }
 }
 

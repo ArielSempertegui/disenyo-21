@@ -5,8 +5,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="author" content="Ariel Sempertegui">
    <title>Proyecto AAA</title>
-   <link rel="stylesheet" href="static/css/style.css">
    <link rel="shortcut icon" href="../proyecto-multimedia/static/img/milogo.svg" type="image/x-icon">
+   <link rel="stylesheet" href="static/css/style.css">
+   <link rel="stylesheet" href="static/css/lite-yt-embed.css"/>
 </head>
 <body>
     
@@ -251,7 +252,11 @@
                 <p>Se trata del primer vídeo de youtube subido a la plataforma en la historia oficialmente el 24 de abril 2005 hora española. En el vídeo se presenta Jawed Karim cofundador de Youtube.</p>
             </article>
             <div class="video-container">
-                <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=9q1MlJRTALp_l6Dx" title="Me at the zoo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <lite-youtube videoid="jNQXAC9IVRw" class="youtube">
+                  <a href="https://youtube.com/watch?v=jNQXAC9IVRw" class="lyt-playbtn" title="Play Video">
+                    <span class="lyt-visually-hidden">Me at the Zoo</span>
+                  </a>
+                </lite-youtube>
             </div>
         </section>
 
@@ -311,5 +316,6 @@
             <div>2020 MegaOne. Made With Love By Themesindustry</div>
         </section>
     </footer>
+    <script src="static/js/lite-yt-embed.js"></script>
 </body>
 </html>
