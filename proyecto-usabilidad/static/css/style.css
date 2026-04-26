@@ -3,19 +3,23 @@
     --primary-color: #ffffff;
     --secondary-color: #18191d;
     --tertiary-color: #AB0E24;
-        --shadow-color: #d5d5d5;
+    --shadow-color: #d5d5d5;
     --light-shadow-color: #f7f8fb;
     --pink-color: #FF7D8F;
     --two-columns: 1fr 1fr;
     --light-weight: 300;
     --h3-size: 60px;
-    font-family: "Roboto", sans-serif;
+    --main-font: "Roboto", sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
 }
 
 .hidden {
@@ -314,7 +318,6 @@ nav {
         align-items: center;
         background-color: var(--tertiary-color);
         border-radius: 50%;
-        font-size: 3em;
         transform: rotate(180deg) translateY(30px);
     }
 
@@ -494,10 +497,6 @@ button[type="submit"]:focus {
         display: flex;
         align-items: center;
         gap: 20px;
-
-        & i {
-            font-size: 30px;
-        }
     }
 }
 
@@ -837,8 +836,12 @@ button[type="submit"]:focus {
         & .icon {
             width: 45px;
             height: 45px;
-            font-size: 30px;
             transform: rotate(180deg) translateY(22px);
+        }
+
+        & .quote {
+            width: 25px;
+            height: 25px;
         }
 
         & img {
